@@ -35,7 +35,7 @@ if( ! class_exists( 'userSwitcher' ) ):
                         $this->current_switcher = get_current_user_id();
                         $switchers = (array) get_option( 'user_switcher' );
                         $this->user_switcher = $switchers[$this->current_switcher];
-      
+
                         if( !empty($this->user_switcher)  && $this->current_switcher != $this->user_switcher ){
                                 add_filter( 'user_has_cap', array( $this, 'set_option_cap' ), 500, 3 );
                                 
@@ -89,8 +89,8 @@ if( ! class_exists( 'userSwitcher' ) ):
                                 echo '<input type="hidden" name="action" value="update" />';
                                 wp_nonce_field("user_switcher-options");                               
                                 ?>
-                                        <select name="user_switcher[<?php _e(get_current_user_id()); ?>]">
-                                                <option value="guest">Guest</option>
+                                        <select name="user_switcher[<?php _e($this->current_switcher); ?>]">
+                                                <option value="guest" <?php selected('guest', $this->user_switcher); ?>>Guest</option>
                                                 <?php
                                                 global $wp_roles;
                                                 $roles = array_map(create_function('$a', ' return $a["name"]; ' ), $wp_roles->roles );
