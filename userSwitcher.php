@@ -34,9 +34,9 @@ if( ! class_exists( 'userSwitcher' ) ):
                         global $pagenow, $current_user;
                         $this->current_switcher = get_current_user_id();
                         $switchers = (array) get_option( 'user_switcher' );
-                        $this->user_switcher = (int) $switchers[$this->current_switcher];
-           
-                        if( $this->user_switcher > 0 && $this->current_switcher != $this->user_switcher ){
+                        $this->user_switcher = $switchers[$this->current_switcher];
+      
+                        if( !empty($this->user_switcher)  && $this->current_switcher != $this->user_switcher ){
                                 add_filter( 'user_has_cap', array( $this, 'set_option_cap' ), 500, 3 );
                                 
                                 if( intval( $this->user_switcher ) > 0 ){                                        
