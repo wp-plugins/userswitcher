@@ -68,14 +68,16 @@ if( ! class_exists( 'userSwitcher' ) ):
                 }
                 
                 public function switcher_html(){
-                        if( !is_super_admin( $this->current_switcher ) ) return;
+                        $current = get_userdata( (int) $this->current_switcher );
+                        if( in_array( 'administrator', $current->roles ) ) {
                         
-                        global $wp_admin_bar;
-                        
-                        $wp_admin_bar->add_menu( array(
-                                'id' => 'user-switcher',
-                                'title' => '<span class="switcher-icon">userSwitcher</span>'
-                        ));
+                                global $wp_admin_bar;
+                                
+                                $wp_admin_bar->add_menu( array(
+                                        'id' => 'user-switcher',
+                                        'title' => '<span class="switcher-icon">userSwitcher</span>'
+                                ));
+                        }
                 }
                 
                 public function footer(){
