@@ -15,7 +15,7 @@ if( ! class_exists( 'userSwitcher' ) ):
                 public function __construct(){
                         add_action( 'init', array($this, 'validate_current_user') );
                         add_action( 'admin_init', array($this, 'admin_init') );
-                        add_action( 'admin_bar_menu', array( $this, 'switcher_html' ), 1000 );
+                        add_action( 'admin_bar_menu', array( $this, 'switcher_html' ), 1000 );                        
                         add_action( ( is_admin() ? 'admin_footer' : 'wp_footer'), array( $this, 'footer'), 1 );
                 }
                 
@@ -68,6 +68,8 @@ if( ! class_exists( 'userSwitcher' ) ):
                 }
                 
                 public function switcher_html(){
+                        if( !is_super_admin( $this->current_switcher ) ) return;
+                        
                         global $wp_admin_bar;
                         
                         $wp_admin_bar->add_menu( array(
@@ -78,7 +80,7 @@ if( ! class_exists( 'userSwitcher' ) ):
                 
                 public function footer(){
                         global $wp_admin_bar;
-                        if ( ! is_admin_bar_showing() || ! is_object( $wp_admin_bar ) )
+                        if ( !is_super_admin( $this->current_switcher ) && (! is_admin_bar_showing() || ! is_object( $wp_admin_bar ) ) )
                         return;
                 
                         $switcher_url = WPMU_PLUGIN_URL . "/userSwitcher";
