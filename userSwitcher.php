@@ -3,7 +3,7 @@
  * Plugin Name: userSwitcher
  * Description: Experience what you're user experienced and know what they can do to your site without logging in/out.
  * Version: 1.0
- * Author: irenem
+ * Author: Irene A. Mitchell
  * License: GPLv2 or later
  **/
 

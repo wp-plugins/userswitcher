@@ -1,5 +1,5 @@
 === userSwitcher ===
-Contributors: Irene A. Mitchell
+Contributors: irenem
 Tags: guest, users, roles, capabilities
 Requires at least: 3.4
 Tested up to: 4.0
