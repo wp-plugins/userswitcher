@@ -3,7 +3,7 @@ Contributors: irenem
 Tags: guest, users, roles, capabilities
 Requires at least: 3.4
 Tested up to: 4.1
-Stable tag: trunk
+Stable tag: 1.1
 License: GPLv2 or later
 
 Experience what you're user experienced and know what they can do to your site without logging in/out.
