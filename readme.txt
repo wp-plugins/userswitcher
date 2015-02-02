@@ -3,7 +3,7 @@ Contributors: irenem
 Tags: guest, users, roles, capabilities
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: trunk
+Stable tag: 1.1
 License: GPLv2 or later
 
 Experience what you're user experienced and know what they can do to your site without logging in/out.
@@ -35,3 +35,7 @@ That depends on the type of user you switch yourself into. If you switch to say 
 
 = I switch to guest user, why can I still read private posts? =
 Private or password protected posts authored by you are still readable if you switch to `GUEST` or any other user `role`.
+
+=== Changelog ===
+= 1.1 =
+* Updated UI both back-end and front-end.
