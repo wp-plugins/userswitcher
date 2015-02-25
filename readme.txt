@@ -1,6 +1,6 @@
 === userSwitcher ===
 Contributors: irenem
-Tags: guest, users, roles, capabilities
+Tags: guest, user, users, roles, capabilities, switcher
 Requires at least: 3.4
 Tested up to: 4.1
 Stable tag: 1.1.2

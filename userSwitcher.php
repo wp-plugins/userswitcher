@@ -3,7 +3,7 @@
  * Plugin Name: userSwitcher
  * Plugin URI: http://irenemitchell.com/userswitcher
  * Description: Experience what you're user experienced and know what they can do to your site without logging in/out.
- * Version: 1.1
+ * Version: 1.1.2
  * Author: Irene A. Mitchell
  * Author URI: http://irenemitchell.com
  * License: GPLv2 or later
