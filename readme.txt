@@ -41,7 +41,7 @@ That depends on the type of user you switch yourself into. If you switch to say 
 = I switch to guest user, why can I still read private posts? =
 Private or password protected posts authored by you are still readable if you switch to `GUEST` or any other user `role`.
 
-== Screenshot ==
+== Screenshots ==
 1. Switcher menu
 
 == Changelog ==
